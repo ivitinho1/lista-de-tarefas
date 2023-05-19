@@ -1,0 +1,133 @@
+/* @import url('https://fonts.googleapis.com/css2?family= Lato :ital@1 & display=swap');
+ */*{
+    font-family: 'Lato', sans-serif;
+}
+
+:root{
+    --color-dark: rgb(14, 14, 14);
+    --color-dark2: rgb(32, 32,32);
+    --color-dark3: rgb(22,22,22);
+    --color-white: #fff;
+    --color-green: rgb(103, 195, 80);
+    --color-red: rgb(184,40,35);
+    --color-red2: rgb(146,22,17);
+}
+
+body{
+    background: url('https://i.pinimg.com/originals/67/b2/a9/67b2a9ba5e85822f237caae92111e938.gif') center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.content input{
+    background-color: var(--color-dark3);
+    color: var(--color-white);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.content-add-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#input-new-tesk,
+#btn-new-tesk{
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    padding: 1rem;
+}
+
+#input-new-tesk{
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+#btn-new-tesk{
+    background-color: var(--color-dark2);
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-new-tesk:hover{
+    background-color: purple;
+}
+
+#to-do-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+}
+
+#to-do-list li{
+    color: var(--color-green);
+    font-weight: 700;
+    list-style: none;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#to-do-list li:hover{
+    background-color: var(--color-dark3);
+    transition: .4s;
+    border-radius: 1rem;
+    padding-left: 1rem;
+}
+
+#btn-ok{
+    border: none;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-size: 1rem;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-ok:hover{
+    background-color: var(--color-green);
+}
+
+/* responsive mobile */
+@media(max-width: 425px){
+    .content-add-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-body li{
+        max-width: 390px;
+        gap: 1rem;
+    }
+
+    input{
+        max-width: 240px;
+    }
+}
